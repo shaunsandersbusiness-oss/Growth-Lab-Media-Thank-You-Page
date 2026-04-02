@@ -15,11 +15,6 @@ export default function ThankYou() {
   });
 
   useEffect(() => {
-    // Fire the Meta Pixel Schedule event on component mount
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Schedule');
-    }
-
     // Parse URL parameters from GoHighLevel (e.g., ?start=2026-04-15T14:00:00Z)
     const params = new URLSearchParams(window.location.search);
     const startParam = params.get('start');
